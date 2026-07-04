@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th"> 
+<head>
+<meta charset="UTF-8"> 
+<title>Book Flight</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+body{
+  display:flex;
+  justify-content:center; 
+  align-items:center;
+  min-height:100vh; 
+  padding:40px; 
+  background: #f0f0f0;
+}
+.card{
+  width:420px; 
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+.tabs{
+  display:flex;
+  background:#2596be;
+}
+.tabs button{
+  flex:1; 
+  padding:14px 0;
+  text-align:center;
+  color:#fff;
+  font-size: 14px;
+  cursor:pointer; 
+  border:none;
+  background:none;
+}
+.form-body{
+  padding:25px 20px;
+}
+.row{
+  display:flex; 
+  gap:15px;  
+  margin-bottom: 18px;
+}
+.field{
+  flex:1; 
+}
+.field label{
+  display:block; 
+  font-weight:bold;
+  font-size:13px;
+  margin-bottom:6px;
+  color:#333;
+}
+.field select,.field input{
+  width:100%;
+  padding:8px 10px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  background:#fafafa;
+  font-size:13px;
+  color:#555;
+}
+.field label.currency{
+  color:#e74c3c;
+}
+.btn-search{
+  width:100%;
+  background:#e8541e;
+  font-weight:bold;
+  border:none;
+  padding:12px;
+  color:#fff;
+  border-radius:4px;
+  letter-spacing:1px;
+  cursor:pointer;
+} 
+.btn-search:hover{
+  background:#d14613;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="tabs">
+  <button type="button"><i class="fa-solid fa-plane"></i> Book Flight</button>
+	<button type="button"><i class="fa-solid fa-calendar-days"></i> Schedule</button>
+	<button type="button"><i class="fa-solid fa-ticket"></i> Ticket</button>
+	<button type="button"><i class="fa-solid fa-hotel"></i> Hotel</button>
+</div>
+<form class="form-body">
+  <div class="row">
+  <div class="field">
+  <!--flying from/to-->
+  <label for="from">Flying from</label>
+  <select id="from" name="from">
+	<option>DMK ดอนเมือง</option>
+	<option>HDY หาดใหญ่</option>
+	<option>NST นครศรีธรรมราช</option>
+	<option>BKK สุวรรณภูมิ</option>
+  </select></div>
+	<div class="field">
+  <label for="to">To</label>
+  <select id="to" name="to">
+  <option>เชียงใหม่</option>
+  <option>ขอนแก่น</option>
+  <option>พะเยา</option>
+  <option>โตเกียว ญี่ปุ่น</option>
+  </select></div></div>
+ <!--Departing/Returning-->
+  <div class="row">
+	<div class="field">
+  <label for="departing">Departing</label>
+  <input type="date" id="departing"></div>
+	<div class="field">
+  <label for="returning">Returning</label>
+  <input type="date" id="returning">
+  </div></div>
+<!--Adult/Child/infant/Currency-->
+	<div class="row">
+	<div class="field">
+  <label for="adult">Adult</label>
+  <input type="number" id="adult" name="adult"></div>
+	<div class="field">
+  <label for="child">Child</label>
+  <input type="number" id="child" name="child"></div>
+	<div class="field">
+  <label for="infant">Infant</label>
+  <input type="number" id="infant" name="infant"></div>
+	<div class="field">
+  <label for="currency" class="currency">Currency</label>
+  <select id="currency" name="currency">
+  <option>THB</option>
+  <option>USD</option>
+  <option>EUR</option>
+  <option>GBP</option>
+  <option>JPY</option>
+  <option>CNY</option>
+  </select>
+  </div></div>
+<!--search-->
+	<button type="submit" class="btn-search">SEARCH</button>
+
+</form>
+  
+  
+</div>
+</body>
+</html>
